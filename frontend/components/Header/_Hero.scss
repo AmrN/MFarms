@@ -1,0 +1,24 @@
+.Hero {
+  text-align: center;
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+
+  .intro {
+    background-color: white;
+    margin: 12rem 32rem;
+    position: relative;
+    border-radius: 10px;
+    .intro-image {
+      position: absolute;
+      max-width: 20rem;
+      bottom: 100%;
+      left: 50%;
+      transform: translate3d(-50%, 65%, 0);
+    }
+  }
+}
