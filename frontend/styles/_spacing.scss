@@ -1,0 +1,108 @@
+$spacing: .5rem;
+
+// margins
+@mixin m($multiplier) {
+  margin: $spacing * $multiplier;
+}
+@mixin mt($multiplier) {
+  margin-top: $spacing * $multiplier;
+}
+@mixin mb($multiplier) {
+  margin-bottom: $spacing * $multiplier;
+}
+@mixin my($multiplier) {
+  margin-top: $spacing * $multiplier;
+  margin-bottom: $spacing * $multiplier;
+}
+@mixin mr($multiplier) {
+  margin-right: $spacing * $multiplier;
+}
+@mixin ml($multiplier) {
+  margin-left: $spacing * $multiplier;
+}
+@mixin mx($multiplier) {
+  margin-right: $spacing * $multiplier;
+  margin-left: $spacing * $multiplier;
+}
+
+// paddings
+@mixin p($multiplier) {
+  padding: $spacing * $multiplier;
+}
+@mixin pt($multiplier) {
+  padding-top: $spacing * $multiplier;
+}
+@mixin pb($multiplier) {
+  padding-bottom: $spacing * $multiplier;
+}
+@mixin py($multiplier) {
+  padding-top: $spacing * $multiplier;
+  padding-bottom: $spacing * $multiplier;
+}
+@mixin pr($multiplier) {
+  padding-right: $spacing * $multiplier;
+}
+@mixin pl($multiplier) {
+  padding-left: $spacing * $multiplier;
+}
+@mixin px($multiplier) {
+  padding-right: $spacing * $multiplier;
+  padding-left: $spacing * $multiplier;
+}
+
+
+
+// @mixin maring-and-padding-spacing( $spacing ) {
+//    @for $i from 1 to 41{
+//     // Margin
+//     %m#{$i} {
+//       margin: $spacing * $i;
+//     }
+
+//     %mt#{$i},
+//     %my#{$i} {
+//       margin-top: $spacing * $i;
+//     }
+
+//     %mb#{$i},
+//     %my#{$i} {
+//       margin-bottom: $spacing * $i;
+//     }
+
+//     %ml#{$i},
+//     %mx#{$i} {
+//       margin-left: $spacing * $i;
+//     }
+
+//     %mr#{$i},
+//     %mx#{$i} {
+//       margin-right: $spacing * $i;
+//     }
+
+//     // Padding
+//     %p#{$i} {
+//       padding: $spacing * $i;
+//     }
+
+//     %pt#{$i},
+//     %py#{$i} {
+//       padding-top: $spacing * $i;
+//     }
+
+//     %pb#{$i},
+//     %py#{$i} {
+//       padding-bottom: $spacing * $i;
+//     }
+
+//     %pl#{$i},
+//     %px#{$i} {
+//       padding-left: $spacing * $i;
+//     }
+
+//     %pr#{$i},
+//     %px#{$i} {
+//       padding-right: $spacing * $i;
+//     }
+//   }
+// }
+// @include maring-and-padding-spacing($spacing);
