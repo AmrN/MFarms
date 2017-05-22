@@ -2,28 +2,42 @@
   background-color: white;
   // height: 100vh;
   @include py(20);
-
 }
 
 .InfographicRow {
-  background-color: pink;
+  // background-color: pink;
   // @include py(10);
-  &:last-child {
-    .icon-container {
-      background-color: black;
-    }
-    .text-container {
-      background-color: gold;
-    }
+  transition: all .7s;
 
-    .image-container {
-      background-color: coral;
-    }
+  // &:last-child {
+  //   .icon-container {
+  //     // background-color: black;
+  //   }
+
+  //   .text-container {
+  //     // background-color: gold;
+  //   }
+
+  //   .image-container {}
+  // }
+
+  .text-image-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .icon-container {
-    background-color: tomato;
+    // background-color: tomato;
+    flex: 0 0 10rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     position: relative;
+    // @include pb(20);
+    min-height: 30rem;
     .vertical-line {
       position: absolute;
       top: 0;
@@ -34,6 +48,7 @@
       background-color: $primary-color;
       // z-index: 1;
     }
+
     .horizontal-line {
       position: absolute;
       top: 50%;
@@ -44,18 +59,65 @@
     }
 
     img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
       z-index: 10;
+    }
+    @include tablet-up {
+       @include pt(10);
+       min-height: 15rem;
+      // background-color: red;
     }
   }
 
   .text-container {
-    background-color: teal;
-
-    @include pl(4);
+    font-size: 1.8rem;
+    @include plr(10);
   }
 
   .image-container {
-    @include py(10);
-    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include py(10);
+    // background-color: steelblue;
   }
+  @include tablet-up {
+     @include pxr(5);
+
+    .text-image-container {
+      flex-direction: row;
+    }
+
+    .image-container {
+      // flex-basis: 65%;
+      flex-basis: 60%;
+      justify-content: flex-end;
+      // background-color: grey;
+    }
+
+    .text-container {
+      font-size: 1.5rem;
+      flex-basis: 40%;
+      
+      // background-color: red;
+    }
+
+  }
+
+  // .text-container {
+  //   // background-color: teal;
+  //   @include pl(4);
+  // }
+
 }
+
+// .fixed {
+//   position: fixed;
+//   width: 100%;
+//   background-color: teal;
+//   height: 5px;
+//   top: calc(50% - 2.5px);
+// }

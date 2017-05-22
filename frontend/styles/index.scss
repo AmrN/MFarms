@@ -1,5 +1,4 @@
 @import url( 'https://fonts.googleapis.com/css?family=Lato:300,400,700');
-
 @import 'normalize.css';
 @import './skeleton';
 @import './variables';
@@ -7,15 +6,21 @@
 @import './spacing';
 @import './components';
 
-html{
- height:100%;
- min-height:100%;
+*,
+*::after,
+*::before {
+  -webkit-backface-visibility: hidden;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
 }
 
 body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
-  min-height:100%;
+  min-height: 100%;
 }
 
 img {
@@ -31,4 +36,3 @@ ul {
 ul {
   list-style: none;
 }
-
