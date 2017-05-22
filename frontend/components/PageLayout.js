@@ -1,4 +1,5 @@
 import Header from './Header/Header'
+import Footer from './Footer/Footer';
 import stylesheet from 'styles/index.scss';
 import React, { Component } from 'react';
 import Head from 'next/head'
@@ -31,6 +32,7 @@ class PageLayout extends Component {
         </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }}></style>
         <Header />        {this.props.children}
+        <Footer />
       </div >
     )
   }

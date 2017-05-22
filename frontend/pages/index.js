@@ -26,18 +26,6 @@ export default () => (
       {renderChallengeHeroContent()}
     </Hero>
     <Challenge />
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
-    <h1>Lorem ipsum dolor.</h1>
 
   </PageLayout>
 )

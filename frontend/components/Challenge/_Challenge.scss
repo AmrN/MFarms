@@ -1,0 +1,21 @@
+.Challenge {
+  background-color: white;
+  @include pb(10);
+  .cta-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta {
+    font-size: 2rem;
+    @include py(2);
+    @include px(10);
+  }
+
+  .citations {
+    @include py(2);
+    @include mt(15);
+    max-width: 40rem;
+    border-top: 1px solid #ccc;
+  }
+}
