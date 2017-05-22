@@ -118,6 +118,37 @@ const Infographic = () => {
           Estimated food import bill for Arab region  to reach over $400 bn by 2030
         </InfographicRow>
 
+
+        <InfographicRow
+          iconUrl={'/static/challenge/statistics4.png'}
+          imageUrl={'/static/challenge/agriculture.png'}
+        >
+          Despite water scarcity, 84% of water in region is used for Agriculture and irrigation
+        </InfographicRow>
+
+
+        <InfographicRow
+          iconUrl={'/static/challenge/statistics5.png'}
+          imageUrl={'/static/challenge/well.png'}
+        >
+          Over the last 20 years, the Arab world has lost 40% of its water sources through overuse
+        </InfographicRow>
+
+
+        <InfographicRow
+          iconUrl={'/static/challenge/statistics6.png'}
+          imageUrl={'/static/challenge/population-grow.png'}
+        >
+          Regional population to grow by 50% in the next 30 years, putting even more pressure
+        </InfographicRow>
+
+
+        <InfographicRow
+          iconUrl={'/static/challenge/statistics7.png'}
+          imageUrl={'/static/challenge/farms.png'}
+        >
+          Cultivated land will need to accordingly increase by almost 50% to keep pace
+        </InfographicRow>
       </div>
     </div>
   );
