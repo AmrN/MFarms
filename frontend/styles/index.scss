@@ -2,16 +2,24 @@
 
 @import 'normalize.css';
 @import './skeleton';
+@import './variables';
 @import './media-queries';
 @import './spacing';
 @import './components';
 
+html{
+ height:100%;
+ min-height:100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
+  min-height:100%;
 }
 
 img {
+  max-width: 100%;
   display: block;
 }
 
@@ -23,3 +31,4 @@ ul {
 ul {
   list-style: none;
 }
+

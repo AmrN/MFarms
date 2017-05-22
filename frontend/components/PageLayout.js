@@ -1,12 +1,9 @@
 import Header from './Header/Header'
 import stylesheet from 'styles/index.scss';
 import React, { Component } from 'react';
+import Head from 'next/head'
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-}
+
 
 class PageLayout extends Component {
   static childContextTypes = {
@@ -28,6 +25,10 @@ class PageLayout extends Component {
   render() {
     return (
       <div >
+        <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <title>Madar Farms</title>
+        </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }}></style>
         <Header />        {this.props.children}
       </div >

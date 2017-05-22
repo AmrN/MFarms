@@ -5,8 +5,8 @@ import Hero from './Hero';
 
 const Header = () => (
   <div className="Header">
-    {/*<NavBar />*/}
-    <Hero />
+    <NavBar />
+    {/*<Hero />*/}
   </div>
 );
 

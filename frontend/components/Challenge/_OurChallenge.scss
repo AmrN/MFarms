@@ -1,0 +1,23 @@
+.OurChallenge {
+  background-color: $grey;
+  @include py(7);
+
+  h2 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    // @include 
+
+    em {
+      color: lighten($primary-color, 30%);
+      padding-right: 2px;
+    }
+  }
+
+  img {
+    max-width: 10rem;
+  }
+
+}

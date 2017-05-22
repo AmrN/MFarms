@@ -1,0 +1,61 @@
+.Infographic {
+  background-color: white;
+  // height: 100vh;
+  @include py(20);
+
+}
+
+.InfographicRow {
+  background-color: pink;
+  // @include py(10);
+  &:last-child {
+    .icon-container {
+      background-color: black;
+    }
+    .text-container {
+      background-color: gold;
+    }
+
+    .image-container {
+      background-color: coral;
+    }
+  }
+
+  .icon-container {
+    background-color: tomato;
+    position: relative;
+    .vertical-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      width: .5rem;
+      background-color: $primary-color;
+      // z-index: 1;
+    }
+    .horizontal-line {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 50%;
+      height: .5rem;
+      background-color: $primary-color;
+    }
+
+    img {
+      z-index: 10;
+    }
+  }
+
+  .text-container {
+    background-color: teal;
+
+    @include pl(4);
+  }
+
+  .image-container {
+    @include py(10);
+    background-color: steelblue;
+  }
+}

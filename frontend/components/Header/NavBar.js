@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box } from 'reflexbox';
 
-const componentName = () => {
+const NavBar = () => {
   return (
     <header className="NavBar">
       <Flex className="container" justify="space-between" align="center">
@@ -9,30 +9,30 @@ const componentName = () => {
           <img className="logo" src="/static/menu/logo.png" alt="logo" />
         </Flex>
         <Flex justify="flex-end" flexAuto align="center">
-          <Flex px={2} className="menu-item" align="center">
+          <Flex className="menu-item" align="center">
             <div>
               About
             <div className="sub-menu">
                 <Flex className="sub-menu-inner" flexColumn>
-                  <Box p={2}>The Challenge</Box>
-                  <Box p={2}>The Challenge</Box>
-                  <Box p={2}>The Challenge</Box>
-                  <Box p={2}>The Challenge</Box>
+                  <span className="item">The Challenge</span>
+                  <span className="item">The Challenge</span>
+                  <span className="item">The Challenge</span>
+                  <span className="item">The Challenge</span>
                 </Flex>
               </div>
 
             </div>
           </Flex>
-          <Flex px={2} className="menu-item" align="center">
+          <Flex className="menu-item" align="center">
             <span >Our Services</span>
           </Flex>
-          <Flex px={2} className="menu-item" align="center">
+          <Flex className="menu-item" align="center">
             <span >Media</span>
           </Flex>
-          <Flex px={2} className="menu-item" align="center">
+          <Flex className="menu-item" align="center">
             <span >Shop Now</span>
           </Flex>
-          <Flex px={2} className="menu-item" align="center">
+          <Flex className="menu-item" align="center">
             <span >Contact us</span>
           </Flex>
         </Flex>
@@ -41,4 +41,4 @@ const componentName = () => {
   );
 };
 
-export default componentName;
+export default NavBar;

@@ -1,4 +1,5 @@
 $spacing: .5rem;
+$rSpacing: 1%;
 
 // margins
 @mixin m($multiplier) {
@@ -50,7 +51,57 @@ $spacing: .5rem;
   padding-left: $spacing * $multiplier;
 }
 
+// responsive 
 
+// margins
+@mixin mr($multiplier) {
+  margin: $rSpacing * $multiplier;
+}
+@mixin mtr($multiplier) {
+  margin-top: $rSpacing * $multiplier;
+}
+@mixin mbr($multiplier) {
+  margin-bottom: $rSpacing * $multiplier;
+}
+@mixin myr($multiplier) {
+  margin-top: $rSpacing * $multiplier;
+  margin-bottom: $rSpacing * $multiplier;
+}
+@mixin mrr($multiplier) {
+  margin-right: $rSpacing * $multiplier;
+}
+@mixin mlr($multiplier) {
+  margin-left: $rSpacing * $multiplier;
+}
+@mixin mxr($multiplier) {
+  margin-right: $rSpacing * $multiplier;
+  margin-left: $rSpacing * $multiplier;
+}
+
+// paddings
+@mixin pr($multiplier) {
+  padding: $rSpacing * $multiplier;
+}
+@mixin ptr($multiplier) {
+  padding-top: $rSpacing * $multiplier;
+}
+@mixin pbr($multiplier) {
+  padding-bottom: $rSpacing * $multiplier;
+}
+@mixin pyr($multiplier) {
+  padding-top: $rSpacing * $multiplier;
+  padding-bottom: $rSpacing * $multiplier;
+}
+@mixin prr($multiplier) {
+  padding-right: $rSpacing * $multiplier;
+}
+@mixin plr($multiplier) {
+  padding-left: $rSpacing * $multiplier;
+}
+@mixin pxr($multiplier) {
+  padding-right: $rSpacing * $multiplier;
+  padding-left: $rSpacing * $multiplier;
+}
 
 // @mixin maring-and-padding-spacing( $spacing ) {
 //    @for $i from 1 to 41{
