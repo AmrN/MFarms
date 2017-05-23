@@ -26,6 +26,5 @@ export default () => (
       {renderChallengeHeroContent()}
     </Hero>
     <Challenge />
-
   </PageLayout>
 )

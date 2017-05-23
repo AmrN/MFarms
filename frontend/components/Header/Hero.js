@@ -52,29 +52,32 @@ class Hero extends Component {
 
   render() {
     const heroBackground = 'url(/static/challenge/challenge-background.jpg)';
-    const bgImgStyles = { 
+    const bgImgStyles = {
       ...this.state.bgImgStyles,
       backgroundImage: heroBackground,
     };
     const { title, contentImage, children } = this.props;
     return (
       <div ref={el => this.container = el} className="Hero">
-        <div className="bg-img" style={bgImgStyles} />
-        <Flex flexColumn py={5} align="center">
-          <h1>{title}</h1>
+        <div className="bg-img" style={bgImgStyles} /> 
+        <div className="content-container">
+          <Flex flexColumn py={5} align="center">
+            <h1>{title}</h1>
 
-          <Flex flexColumn className="intro">
-            <img
-              src={contentImage}
-              alt="content image"
-              className="intro-image"
-            />
+            <Flex flexColumn className="intro">
+              <img
+                src={contentImage}
+                alt="content image"
+                className="intro-image"
+              />
 
-            <div className="intro-content">
-              {children}
-            </div>
+              <div className="intro-content">
+                {children}
+              </div>
+            </Flex>
           </Flex>
-        </Flex>
+        </div>
+
 
       </div>
     );

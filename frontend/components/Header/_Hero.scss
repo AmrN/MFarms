@@ -3,7 +3,13 @@
   @include pt(18);
   // animation: fade-in 2s 1s forwards;
   // opacity: 0;
-
+  background-color: $grey;
+  z-index: -1;
+  position: relative;
+  .content-container {
+    z-index: 1;
+    position: relative;
+  }
   .bg-img {
     position: fixed;
     content: ' ';
@@ -16,7 +22,8 @@
     // right: 0;
     // background-position: center;
     background-size: cover;
-    z-index: -10;
+
+    // z-index: 1;
   }
 
   h1 {
@@ -38,7 +45,7 @@
     max-width: 90%;
     position: relative;
     border-radius: 10px;
-    
+
     .intro-image {
       position: absolute;
       max-width: 25rem;
