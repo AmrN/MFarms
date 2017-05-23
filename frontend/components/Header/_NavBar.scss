@@ -5,13 +5,17 @@
     max-width: 20rem;
   }
 
+  .logo-link {
+    opacity: 1;
+  }
+
   .menu-item {
     color: white;
     text-transform: uppercase;
     position: relative;
     font-size: 1.8rem;
     @include px(3);
-    
+
     .sub-menu {
       position: absolute;
       top: 100%;

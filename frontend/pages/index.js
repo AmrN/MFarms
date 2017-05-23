@@ -9,17 +9,18 @@ const renderChallengeHeroContent = () => (
       "Modern agriculture, is more resource intensive, very fossil fuel dependent, uses fertilizers, and is based on massive production.
     </p>
 
-    <b>This policy has to change.</b>
+    <p className="stand-out">This policy has to change.</p>
     <p>
       Resource scarcity, increased population, decresing land availability and accessibility, emerging water scarcity, and soil degradation require us to re-think how best to use our resources for future generations."
     </p>
-    <strong>United Nations</strong>
+    <p className="stand-out -primary">United Nations</p>
   </div>
 );
 
 export default () => (
   <PageLayout>
     <Hero
+      backgroundUrl="/static/challenge/challenge-background.jpg"
       contentImage="/static/challenge/UN.png"
       title="The Challenge"
     >

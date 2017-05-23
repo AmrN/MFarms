@@ -7,7 +7,7 @@ const Map = () => {
         <img src="/static/challenge/arab map.png" alt="arab map" />
       </div>
       <div className="text-wrapper">
-        <p>The Arab region in particular suffers from limited water sources and arable land</p>
+        <p className="stand-out">The Arab region in particular suffers from limited water sources and arable land</p>
       </div>
 
     </Flex>

@@ -1,12 +1,17 @@
 import React from 'react';
 import { Flex, Box } from 'reflexbox';
+import Link from 'next/link';
 
 const NavBar = () => {
   return (
     <header className="NavBar">
       <Flex className="container" justify="space-between" align="center">
         <Flex align="center">
-          <img className="logo" src="/static/menu/logo.png" alt="logo" />
+          <Link href="/">
+            <a className="logo-link">
+              <img className="logo" src="/static/menu/logo.png" alt="logo" />
+            </a>
+          </Link>
         </Flex>
         <Flex justify="flex-end" flexAuto align="center">
           <Flex className="menu-item" align="center">

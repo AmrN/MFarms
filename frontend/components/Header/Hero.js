@@ -51,7 +51,8 @@ class Hero extends Component {
   }
 
   render() {
-    const heroBackground = 'url(/static/challenge/challenge-background.jpg)';
+    // const heroBackground = `url(/static/challenge/challenge-background.jpg)`;
+    const heroBackground = `url(${this.props.backgroundUrl})`;
     const bgImgStyles = {
       ...this.state.bgImgStyles,
       backgroundImage: heroBackground,
@@ -59,17 +60,21 @@ class Hero extends Component {
     const { title, contentImage, children } = this.props;
     return (
       <div ref={el => this.container = el} className="Hero">
-        <div className="bg-img" style={bgImgStyles} /> 
+        <div className="bg-img" style={bgImgStyles} />
         <div className="content-container">
           <Flex flexColumn py={5} align="center">
             <h1>{title}</h1>
 
             <Flex flexColumn className="intro">
-              <img
-                src={contentImage}
-                alt="content image"
-                className="intro-image"
-              />
+              {contentImage && (
+                <div className="intro-image">
+                  <img
+                    src={contentImage}
+                    alt="content image"
+                    className="intro-image"
+                  />
+                </div>
+              )}
 
               <div className="intro-content">
                 {children}

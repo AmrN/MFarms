@@ -24,11 +24,13 @@ class PageLayout extends Component {
   }
 
   render() {
+    let {title} = this.props;
+    title = title ? `Madar Farms - ${title}` : `Madar Farms`;
     return (
       <div >
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <title>Madar Farms</title>
+          <title>{title}</title>
         </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }}></style>
         <Header />        {this.props.children}

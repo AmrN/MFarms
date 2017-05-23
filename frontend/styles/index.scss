@@ -4,6 +4,7 @@
 @import './variables';
 @import './media-queries';
 @import './spacing';
+@import './typography';
 @import './components';
 
 *,
@@ -37,32 +38,14 @@ ul {
   list-style: none;
 }
 
-a {
-  color: $primary-color;
-  text-decoration: none;
-  opacity: .8;
-  transition: all .4s;
-  &:hover {
-    color: $primary-color;
-    opacity: 1;
+section {
+  @include py(15);
+
+  &.-white {
+    background-color: white;
+  }
+
+  &.-center {
+    text-align: center;
   }
 }
-
-
-button {
-  border: 2px solid $primary-color;
-  height: auto;
-  border-radius: 1rem;
-  transition: all .3s;
-
-  &:hover {
-    background-color: $primary-color;
-    color: white;
-    border-color: transparent;
-  }
-}
-
-// .content-wrapper {
-//   z-index: 1;
-//   position: relative;
-// }

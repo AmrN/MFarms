@@ -6,10 +6,12 @@
   background-color: $grey;
   z-index: -1;
   position: relative;
+
   .content-container {
     z-index: 1;
     position: relative;
   }
+
   .bg-img {
     position: fixed;
     content: ' ';
@@ -26,18 +28,19 @@
     // z-index: 1;
   }
 
-  h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.7);
-  }
+  // h1 {
+  //   color: white;
+  //   text-transform: uppercase;
+  //   font-size: 4.5rem;
+  //   font-weight: bold;
+  //   text-shadow: 2px 2px 2px rgba(0,0,0,.7);
+  //   @include mb(15);
+  // }
 
   .intro {
     background-color: white;
     // margin: 12rem 32rem;
-    @include mt(20);
+    // @include mt(10);
     @include pxr(5);
     margin-left: auto;
     margin-right: auto;
@@ -47,38 +50,48 @@
     border-radius: 10px;
 
     .intro-image {
-      position: absolute;
-      max-width: 25rem;
-      bottom: 100%;
-      left: 50%;
-      transform: translate3d(-50%, 70%, 0);
+      // margin-top: 1000px;
+      @include mt(5);
+      img {
+        position: absolute;
+        max-width: 25rem;
+        bottom: 100%;
+        left: 50%;
+        transform: translate3d(-50%, 80%, 0);
+      }
     }
 
     .intro-content {
-      @include mt(15);
-      @include mb(10);
+      // @include mt(15);
+      // @include mb(10);
       @include pxr(7);
+      @include py(12);
       z-index: 1;
       color: #555;
       // text styles
       // br {
       //   line-height: 4rem;
       // }
+      text-align: center;
 
-      p {
-        @include my(2);
+      img {
+        display: inline-block;
       }
 
-      b {
-        font-weight: bold;
-        font-size: 1.8rem;
-      }
+      // p {
+      //   // @include my(2);
+      // }
 
-      strong {
-        color: $primary-color;
-        font-weight: bold;
-        font-size: 1.8rem;
-      }
+      // b {
+      //   font-weight: bold;
+      //   font-size: 1.8rem;
+      // }
+
+      // strong {
+      //   color: $primary-color;
+      //   font-weight: bold;
+      //   font-size: 1.8rem;
+      // }
     }
   }
 }
