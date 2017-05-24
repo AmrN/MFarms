@@ -28,6 +28,11 @@
       white-space: nowrap;
       transition: all .3s 0s;
       z-index: 1000;
+
+      a {
+        color: $copy-color;
+        opacity: 1;
+      }
     }
 
     &:hover .sub-menu {
@@ -61,6 +66,7 @@
       }
 
       .item {
+
         @include px(3);
         @include py(2);
       }

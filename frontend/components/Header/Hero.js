@@ -40,8 +40,8 @@ class Hero extends Component {
     // const diff = window.inner
     this.setState({
       bgImgStyles: {
-        minHeight: this.container.clientHeight,
-        minWidth: this.container.clientWidth,
+        // minHeight: this.container.clientHeight,
+        // minWidth: this.container.clientWidth,
         // left and top
         ...this.getOffset(this.container),
       }

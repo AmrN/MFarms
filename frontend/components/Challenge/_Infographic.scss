@@ -74,7 +74,7 @@
 
   .text-container {
     font-size: 1.8rem;
-    @include plr(10);
+    @include plrel(10);
   }
 
   .image-container {
@@ -85,7 +85,7 @@
     // background-color: steelblue;
   }
   @include tablet-up {
-     @include pxr(5);
+     @include pxrel(5);
 
     .text-image-container {
       flex-direction: row;

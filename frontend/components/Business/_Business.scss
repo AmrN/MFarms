@@ -1,0 +1,30 @@
+.Business {
+  .sound-familiar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .copy {
+      flex: 1 1 0;
+      @include pr(10);
+    }
+    .image {
+      flex: 1 1 0;
+    }
+
+    @include tablet-up {
+      flex-direction: row;
+    }
+  }
+
+  .vertical-features-wrapper {
+    max-width: 70rem;
+    margin: 0 auto;
+    @include mb(10);
+  }
+
+  .cta-wrapper {
+    // @include 
+    text-align: center;
+  }
+}

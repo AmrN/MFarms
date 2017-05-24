@@ -34,15 +34,23 @@ p {
   .icon {
     max-width: 5rem;
     display: inline-block;
-    position: relative;
-    top: 1.7rem;
+    // position: relative;
+    // top: 1.7rem;
+
+    // TODO: this is very bad
+    margin-bottom: -1.8rem;
   }
 }
 
+.strong,
 b,
 strong {
   font-weight: bold;
   color: $primary-color;
+
+  &.-neutral {
+    color: $copy-color;
+  }
 }
 
 em {
@@ -54,10 +62,11 @@ button {
   font-size: $fz-3;
   @include py(2);
   @include px(10);
-  border: 2px solid $primary-color;
+  border: 4px solid $primary-color;
   height: auto;
   border-radius: 1rem;
   transition: all .3s;
+  text-transform: initial;
 
   &:hover {
     background-color: $primary-color;

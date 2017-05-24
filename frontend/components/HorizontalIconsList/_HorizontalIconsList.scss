@@ -1,6 +1,7 @@
 .HorizontalIconsList {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   .icon-item {
     flex: 1 1 50%;
@@ -8,14 +9,60 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     @include tablet {
       flex: 1 1 33.33%;
     }
-
     @include desktop {
       flex: 1 1 0;
     }
+    // background-color: tomato;
+  }
+
+  .icon-text {
+    // max-width: 10rem;
+    @include pxrel(10);
+  }
+
+  &.vertical {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .icon-item {
+      flex: 1;
+    }
+  }
+
+  &.content-horizontal {
+    align-items: flex-start;
+
+    .icon-item {
+      flex-direction: row;
+    }
+
+    .icon-text {
+      @include pl(10);
+      // max-width: 100%;
+    }
+  }
+
+  .cta-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    // background-color: tomato;
+    // @include m(0);
+  }
+
+  .icon-item{ 
+    // background-color: teal;
+    min-height: 11rem;
+  }
+  .icon {
+    // background-color: black;
   }
 
 }

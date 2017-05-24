@@ -54,51 +54,51 @@ $rSpacing: 1%;
 // responsive 
 
 // margins
-@mixin mr($multiplier) {
+@mixin mrel($multiplier) {
   margin: $rSpacing * $multiplier;
 }
-@mixin mtr($multiplier) {
+@mixin mtrel($multiplier) {
   margin-top: $rSpacing * $multiplier;
 }
-@mixin mbr($multiplier) {
+@mixin mbrel($multiplier) {
   margin-bottom: $rSpacing * $multiplier;
 }
-@mixin myr($multiplier) {
+@mixin myrel($multiplier) {
   margin-top: $rSpacing * $multiplier;
   margin-bottom: $rSpacing * $multiplier;
 }
-@mixin mrr($multiplier) {
+@mixin mrrel($multiplier) {
   margin-right: $rSpacing * $multiplier;
 }
-@mixin mlr($multiplier) {
+@mixin mlrel($multiplier) {
   margin-left: $rSpacing * $multiplier;
 }
-@mixin mxr($multiplier) {
+@mixin mxrel($multiplier) {
   margin-right: $rSpacing * $multiplier;
   margin-left: $rSpacing * $multiplier;
 }
 
 // paddings
-@mixin pr($multiplier) {
+@mixin prel($multiplier) {
   padding: $rSpacing * $multiplier;
 }
-@mixin ptr($multiplier) {
+@mixin ptrel($multiplier) {
   padding-top: $rSpacing * $multiplier;
 }
-@mixin pbr($multiplier) {
+@mixin pbrel($multiplier) {
   padding-bottom: $rSpacing * $multiplier;
 }
-@mixin pyr($multiplier) {
+@mixin pyrel($multiplier) {
   padding-top: $rSpacing * $multiplier;
   padding-bottom: $rSpacing * $multiplier;
 }
-@mixin prr($multiplier) {
+@mixin prrel($multiplier) {
   padding-right: $rSpacing * $multiplier;
 }
-@mixin plr($multiplier) {
+@mixin plrel($multiplier) {
   padding-left: $rSpacing * $multiplier;
 }
-@mixin pxr($multiplier) {
+@mixin pxrel($multiplier) {
   padding-right: $rSpacing * $multiplier;
   padding-left: $rSpacing * $multiplier;
 }

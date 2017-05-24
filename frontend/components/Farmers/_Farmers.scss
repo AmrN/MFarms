@@ -4,13 +4,13 @@
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 70% 0, center top;
     background-size: 80%, 100%;
-    @include ptr(38);
+    @include ptrel(38);
 
     .copy-container {
       max-width: 50rem;
       margin: 0 auto;
-      @include pr(5);
-      @include pb(15);
+      @include prel(5);
+      // @include pb(15);
     }
 
   }

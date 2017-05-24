@@ -16,7 +16,7 @@ const Challenge = () => {
 
       <div className="container">
         <div className="citations">
-          <div><b>Statistics Sources:</b></div>
+          <div><b className="-neutral">Statistics Sources:</b></div>
           <div className="cite">
             <cite>UN Arab region sustainability <a href='#'>report</a></cite>
           </div>

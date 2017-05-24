@@ -31,10 +31,13 @@ const Farmers = () => {
 
   return (
     <div className="Farmers">
-      <section className="-white -center">
-        <h2>The Leafy Green Machine<sup>TM</sup> will help you:</h2>
+      <section className="-grey -center">
+        <div className="container">
+          <h2>The Leafy Green Machine<sup>TM</sup> will help you:</h2>
 
-        <HorizontalIconsList icons={icons} />
+          <HorizontalIconsList icons={icons} />
+        </div>
+
       </section>
 
       <section className="-white -center farm-container-section">
@@ -51,10 +54,10 @@ const Farmers = () => {
           </p>
 
           <p className="-lg">
-            Get in touch with us (<img className="icon" src="/static/footer/mail.png" alt="mail"/>) to learn more about the benefits of adopting hydroponic technology and growing in the controlled environment of our container farms.
+            Get in touch with us (<img className="icon" src="/static/footer/mail.png" alt="mail" />) to learn more about the benefits of adopting hydroponic technology and growing in the controlled environment of our container farms.
           </p>
         </div>
-        <button>Shop Now</button>
+        <button>Shop now</button>
       </section>
     </div>
   );

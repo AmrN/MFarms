@@ -16,8 +16,8 @@
     position: fixed;
     content: ' ';
     display: block;
-    // width: 100vw;
-    // min-height: 100vh; 
+    width: 100vw;
+    min-height: 100vh; 
     top: 0;
     // bottom: 0;
     // left: 0;
@@ -41,7 +41,7 @@
     background-color: white;
     // margin: 12rem 32rem;
     // @include mt(10);
-    @include pxr(5);
+    @include pxrel(5);
     margin-left: auto;
     margin-right: auto;
     width: 70rem;
@@ -64,7 +64,7 @@
     .intro-content {
       // @include mt(15);
       // @include mb(10);
-      @include pxr(7);
+      @include pxrel(7);
       @include py(12);
       z-index: 1;
       color: #555;

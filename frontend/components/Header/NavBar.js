@@ -19,17 +19,38 @@ const NavBar = () => {
               About
             <div className="sub-menu">
                 <Flex className="sub-menu-inner" flexColumn>
-                  <span className="item">The Challenge</span>
-                  <span className="item">The Challenge</span>
-                  <span className="item">The Challenge</span>
-                  <span className="item">The Challenge</span>
+                  <div className="item">The Challenge</div>
+                  <div className="item">The Challenge</div>
+                  <div className="item">The Challenge</div>
+                  <div className="item">The Challenge</div>
                 </Flex>
               </div>
 
             </div>
           </Flex>
           <Flex className="menu-item" align="center">
-            <span >Our Services</span>
+            <div>
+              <span >Our Services</span>
+              <div className="sub-menu">
+                <Flex className="sub-menu-inner" flexColumn>
+                  <Link href="/farmers">
+                    <a>
+                      <div className="item">
+                        Farmers
+                      </div>
+                    </a>
+                  </Link>
+                  <Link href="/business">
+                    <a>
+                      <div className="item">
+                        businesses
+                      </div>
+                    </a>
+                  </Link>
+                </Flex>
+              </div>
+
+            </div>
           </Flex>
           <Flex className="menu-item" align="center">
             <span >Media</span>
@@ -42,7 +63,7 @@ const NavBar = () => {
           </Flex>
         </Flex>
       </Flex>
-    </header>
+    </header >
   );
 };
 

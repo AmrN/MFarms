@@ -25,7 +25,7 @@ class PageLayout extends Component {
 
   render() {
     let {title} = this.props;
-    title = title ? `Madar Farms - ${title}` : `Madar Farms`;
+    title = title ? `${title} - Madar Farms` : `Madar Farms`;
     return (
       <div >
         <Head>

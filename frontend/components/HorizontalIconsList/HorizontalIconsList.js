@@ -1,24 +1,37 @@
 import React from 'react';
+import cn from 'classnames';
 
-const HorizontalIconsList = ({ icons }) => {
+const HorizontalIconsList = ({ icons, vertical, contentHorizontal }) => {
   if (!icons) {
     return null;
   }
+
+  const classes = cn('HorizontalIconsList', {
+    'vertical': vertical,
+    'content-horizontal': contentHorizontal
+  });
+
+  const getContent = (thing) => {
+    if (typeof thing === 'string')
+      return thing;
+    return React.cloneElement(thing);
+  }
+
   return (
-    <div className="HorizontalIconsList">
+    <div className={classes}>
       {icons.map(icon => (
         <div
-          key={icon.url + icon.text ? icon.text : ''}
+          key={icon.url}
           className="icon-item"
         >
           <img
-           className="icon"
-           src={icon.url} 
-           alt="icon"/>
+            className="icon"
+            src={icon.url}
+            alt="icon" />
 
-          <p className="icon-text">
-            {icon.text}
-          </p>
+          <div className="strong -neutral icon-text">
+            {getContent(icon.text)}
+          </div>
         </div>
       ))}
     </div>
