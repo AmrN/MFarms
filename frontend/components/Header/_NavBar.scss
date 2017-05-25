@@ -16,6 +16,11 @@
     font-size: 1.8rem;
     @include px(3);
 
+    a {
+      color: white;
+      opacity: 1;
+    }
+
     .sub-menu {
       position: absolute;
       top: 100%;

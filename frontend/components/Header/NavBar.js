@@ -16,8 +16,8 @@ const NavBar = () => {
         <Flex justify="flex-end" flexAuto align="center">
           <Flex className="menu-item" align="center">
             <div>
-              About
-            <div className="sub-menu">
+              <div className="item">About</div>
+              <div className="sub-menu">
                 <Flex className="sub-menu-inner" flexColumn>
                   <div className="item">The Challenge</div>
                   <div className="item">The Challenge</div>
@@ -30,7 +30,11 @@ const NavBar = () => {
           </Flex>
           <Flex className="menu-item" align="center">
             <div>
-              <span >Our Services</span>
+              <Link href="/services">
+                <a>
+                  <div>Our Services</div>
+                </a>
+              </Link>
               <div className="sub-menu">
                 <Flex className="sub-menu-inner" flexColumn>
                   <Link href="/farmers">
