@@ -31,5 +31,10 @@
       "usernameField": "email",
       "passwordField": "password"
     }
+  },
+  "mailchimp": {
+    "instance": "us15",
+    "listUniqueId": "be33e2d8bf",
+    "apiKey": "8ee7d4073023ebb7e802aa89e6d0dba3-us15"
   }
 }
