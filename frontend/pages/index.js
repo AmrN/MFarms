@@ -23,15 +23,15 @@ export default class IndexPage extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setPage(nextProps);
-    console.log('in componentWillReceiveProps');
+    // console.log('in componentWillReceiveProps');
   }
 
 
   componentWillMount() {
-    console.log(this.props);
+    // console.log(this.props);
 
     this.setPage(this.props);
-    console.log('in componentWillMount');
+    // console.log('in componentWillMount');
   }
 
   setPage(props) {
@@ -60,11 +60,11 @@ export default class IndexPage extends Component {
   }
 
   componentDidMount() {
-    console.log('in componentDidMount');
+    // console.log('in componentDidMount');
   }
 
   render() {
-    console.log('in render');
+    // console.log('in render');
     // console.log('props: ', this.props);
     const Page = this.Page;
     if (!Page) {

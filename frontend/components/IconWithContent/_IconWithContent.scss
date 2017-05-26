@@ -1,9 +1,12 @@
 .IconWithContent {
   display: flex;
+  height: 100%;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: flex-start; 
+  // background-color: tomato;
   align-items: center;
   .Content {
-
+    height: 100%;
+    width: 100%;
   }
 }

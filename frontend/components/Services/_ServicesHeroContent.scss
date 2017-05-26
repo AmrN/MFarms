@@ -1,3 +1,59 @@
 .ServicesHeroContent {
-  
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+
+  .item-wrapper {
+    flex: 1 1 100%;
+    @include my(2);
+    @include pb(5);
+    // background-color: teal;
+    // display: flex;
+    @include tablet {
+      flex: 0 0 calc(50% - 2px);
+
+      &:nth-child(2n+1) {
+        border-right: 2px $primary-color solid;
+      }
+    }
+    @include desktop {
+      flex: 0 0 calc(25% - 4px);
+
+      border-right: 2px $primary-color solid;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include px(8);
+    // align-items: center;
+    // justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+    // background-color: gold;
+    // max-width: 21rem;
+
+    button {
+      margin-top: auto;
+      @include px(5);
+    }
+  }
+
+  h2 {
+    font-size: $fz-3;
+    @include mb(1);
+  }
+
+  p {
+    @include m(0);
+    @include mb(5);
+  }
 }

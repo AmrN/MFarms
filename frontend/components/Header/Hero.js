@@ -47,7 +47,6 @@ class Hero extends Component {
       }
     });
     // }
-
   }
 
   render() {
@@ -58,6 +57,7 @@ class Hero extends Component {
       backgroundImage: heroBackground,
     };
     const { title, contentImage, children } = this.props;
+
     return (
       <div ref={el => this.container = el} className="Hero">
         <div className="bg-img" style={bgImgStyles} />

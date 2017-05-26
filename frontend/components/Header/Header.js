@@ -7,11 +7,11 @@ import React, { Component } from 'react';
 // const Header = () => (
 class Header extends Component {
   componentDidMount() {
-    console.log('header mounted');
+    // console.log('header mounted');
   }
 
   componentWillUnmount() {
-    console.log('header unmounted');
+    // console.log('header unmounted');
   }
   
   
