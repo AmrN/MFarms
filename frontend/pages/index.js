@@ -1,23 +1,84 @@
 import PageLayout from '../components/PageLayout';
 import Hero from '../components/Header/Hero';
-import Challenge from '../components/Challenge/Challenge';
+import ChallengePage from '../containers/challenge';
+import BusinessPage from '../containers/business';
+import FarmersPage from '../containers/farmers';
+import ServicesPage from '../containers/services';
 import Link from 'next/link';
+import React, { Component } from 'react';
 
-const renderChallengeHeroContent = () => (
-  <div>
-    <p>
-      "Modern agriculture, is more resource intensive, very fossil fuel dependent, uses fertilizers, and is based on massive production.
-    </p>
+export default class IndexPage extends Component {
 
-    <p className="stand-out">This policy has to change.</p>
-    <p>
-      Resource scarcity, increased population, decresing land availability and accessibility, emerging water scarcity, and soil degradation require us to re-think how best to use our resources for future generations."
-    </p>
-    <p className="stand-out -primary">United Nations</p>
-  </div>
-);
+  static async getInitialProps({ query }) {
+    // let Page;
+    // switch (query.page) {
+    //   case 'business':
+    //     Page = BusinessPage;
+    //     break;
+    // }
+    // // console.log(Page);
+    // return { Page };
+    return {};
+  }
 
-export default () => (
+  componentWillReceiveProps(nextProps) {
+    this.setPage(nextProps);
+    console.log('in componentWillReceiveProps');
+  }
+
+
+  componentWillMount() {
+    console.log(this.props);
+
+    this.setPage(this.props);
+    console.log('in componentWillMount');
+  }
+
+  setPage(props) {
+    let Page;
+    const queryPage = props.url.query.page || '';
+
+    switch (queryPage) {
+      case '':
+        Page = ChallengePage;
+        break;
+      case 'challenge':
+        Page = ChallengePage;
+        break;
+      case 'business':
+        Page = BusinessPage;
+        break;
+      case 'farmers':
+        Page = FarmersPage;
+        break;
+      case 'services':
+        Page = ServicesPage;
+        break;
+    }
+    console.log(Page);
+    this.Page = Page;
+  }
+
+  componentDidMount() {
+    console.log('in componentDidMount');
+  }
+
+  render() {
+    console.log('in render');
+    // console.log('props: ', this.props);
+    const Page = this.Page;
+    if (!Page) {
+      return null;
+    }
+    return (
+      <PageLayout>
+        <Page />
+      </PageLayout>
+    );
+
+  }
+}
+/*() => (
   <PageLayout>
     <Hero
       backgroundUrl="/static/challenge/challenge-background.jpg"
@@ -28,4 +89,4 @@ export default () => (
     </Hero>
     <Challenge />
   </PageLayout>
-)
+)*/

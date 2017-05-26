@@ -7,7 +7,7 @@ const NavBar = () => {
     <header className="NavBar">
       <Flex className="container" justify="space-between" align="center">
         <Flex align="center">
-          <Link href="/">
+          <Link href="/?page=challenge" as="/">
             <a className="logo-link">
               <img className="logo" src="/static/menu/logo.png" alt="logo" />
             </a>
@@ -30,21 +30,21 @@ const NavBar = () => {
           </Flex>
           <Flex className="menu-item" align="center">
             <div>
-              <Link href="/services">
+              <Link href="/?page=services" as="/services">
                 <a>
                   <div>Our Services</div>
                 </a>
               </Link>
               <div className="sub-menu">
                 <Flex className="sub-menu-inner" flexColumn>
-                  <Link href="/farmers">
+                  <Link href="/?page=farmers" as="/farmers">
                     <a>
                       <div className="item">
                         Farmers
                       </div>
                     </a>
                   </Link>
-                  <Link href="/business">
+                  <Link href="/?page=business" as="/business">
                     <a>
                       <div className="item">
                         businesses
