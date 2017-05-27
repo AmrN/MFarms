@@ -28,6 +28,8 @@ export default () => (
     >
       {renderChallengeHeroContent()}
     </Hero>
-    <Challenge />
+    <main className="main-content">
+      <Challenge />
+    </main>
   </div>
 )

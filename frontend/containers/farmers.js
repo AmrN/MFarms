@@ -16,7 +16,7 @@ const renderFarmersHeroContent = () => (
 
 export default () => (
   <div>
-        <HeadTitle title="Farmers" />
+    <HeadTitle title="Farmers" />
 
     {/*<PageLayout title="Farmers">*/}
     <Hero
@@ -25,7 +25,10 @@ export default () => (
     >
       {renderFarmersHeroContent()}
     </Hero>
-    <Farmers />
+    <main className="main-content">
+      <Farmers />
+
+    </main>
     {/*</PageLayout>*/}
   </div>
 )

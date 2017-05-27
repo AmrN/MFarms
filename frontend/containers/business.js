@@ -25,7 +25,10 @@ export default () => (
     >
       {renderBusinessHeroContent()}
     </Hero>
-    <Business />
+    <main className="main-content">
+      <Business />
+    </main>
+
     {/*</PageLayout>*/}
   </div>
 )
