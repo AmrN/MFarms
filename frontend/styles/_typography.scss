@@ -60,18 +60,9 @@ em {
 
 button {
   font-size: $fz-3;
-  @include py(2);
-  @include px(10);
-  border: 4px solid $primary-color;
-  height: auto;
-  border-radius: 1rem;
-  transition: all .3s;
-  text-transform: initial;
 
-  &:hover {
-    background-color: $primary-color;
-    color: white;
-    border-color: transparent;
+  &.-sm{
+    font-size: $fz-2;
   }
 }
 

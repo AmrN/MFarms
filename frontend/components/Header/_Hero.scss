@@ -7,6 +7,14 @@
   // z-index: -1;
   position: relative;
 
+  // opt-in by other components
+  .hero-intro-wrapper {
+    width: 70rem;
+    margin: 0 auto;
+    @include pxrel(5);
+    max-width: 95%;
+  } 
+
   .content-container {
     z-index: 1;
     position: relative;

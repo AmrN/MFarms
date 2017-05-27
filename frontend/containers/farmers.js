@@ -5,7 +5,7 @@ import Farmers from '../components/Farmers/Farmers';
 import HeadTitle from '../components/HeadTitle';
 
 const renderFarmersHeroContent = () => (
-  <div>
+  <div className="hero-intro-wrapper">
     <img src="/static/farmers/container.png" alt="container" />
 
     <p>

@@ -6,7 +6,7 @@ import React from 'react';
 import HeadTitle from '../components/HeadTitle';
 
 const renderBusinessHeroContent = () => (
-  <div>
+  <div className="hero-intro-wrapper">
     <img src="/static/business/light.png" alt="container" />
 
     <p>

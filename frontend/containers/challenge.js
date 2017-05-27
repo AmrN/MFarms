@@ -5,7 +5,7 @@ import Challenge from '../components/Challenge/Challenge';
 import HeadTitle from '../components/HeadTitle';
 
 const renderChallengeHeroContent = () => (
-  <div>
+  <div className="hero-intro-wrapper"> 
     <p>
       "Modern agriculture, is more resource intensive, very fossil fuel dependent, uses fertilizers, and is based on massive production.
     </p>

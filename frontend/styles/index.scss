@@ -29,6 +29,36 @@ img {
   display: block;
 }
 
+button {
+  @include py(2);
+  @include px(10);
+  border: 4px solid $primary-color;
+  height: auto;
+  border-radius: 1rem;
+  transition: all .3s;
+  text-transform: initial;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+    border-color: transparent;
+  }
+
+  &.-fill {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 8%);
+    }
+  }
+
+  &.-sm {
+    @include py(1);
+    @include px(5);
+  }
+}
+
 li,
 ul {
   margin: 0;
@@ -38,7 +68,8 @@ ul {
   list-style: none;
 }
 
-main, footer {
+footer,
+main {
   // need this to come above hero
   z-index: 1;
   position: relative;
@@ -59,4 +90,3 @@ section {
     text-align: center;
   }
 }
-
