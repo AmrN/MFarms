@@ -57,7 +57,26 @@ const NavBar = () => {
             </div>
           </Flex>
           <Flex className="menu-item" align="center">
-            <span >Media</span>
+            <div>
+              <Link href="/?page=temp" as="/temp">
+                <a>
+                  <div>Shop Now</div>
+                </a>
+              </Link>
+              <div className="sub-menu">
+                <Flex className="sub-menu-inner" flexColumn>
+                  <Link href="/?page=container" as="/container">
+                    <a>
+                      <div className="item">
+                        Container Farms
+                      </div>
+                    </a>
+                  </Link>
+  
+                </Flex>
+              </div>
+
+            </div>
           </Flex>
           <Flex className="menu-item" align="center">
             <span >Shop Now</span>
