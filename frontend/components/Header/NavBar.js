@@ -18,12 +18,15 @@ const NavBar = () => {
             <div>
               <div className="item">About</div>
               <div className="sub-menu">
-                <Flex className="sub-menu-inner" flexColumn>
+                {/*<Flex className="sub-menu-inner" flexColumn>*/}
+                <div className="sub-menu-inner">
                   <div className="item">The Challenge</div>
                   <div className="item">The Challenge</div>
                   <div className="item">The Challenge</div>
                   <div className="item">The Challenge</div>
-                </Flex>
+                </div>
+
+                {/*</Flex>*/}
               </div>
 
             </div>
@@ -36,7 +39,7 @@ const NavBar = () => {
                 </a>
               </Link>
               <div className="sub-menu">
-                <Flex className="sub-menu-inner" flexColumn>
+                <div className="sub-menu-inner" flexColumn>
                   <Link href="/?page=farmers" as="/farmers">
                     <a>
                       <div className="item">
@@ -51,7 +54,7 @@ const NavBar = () => {
                       </div>
                     </a>
                   </Link>
-                </Flex>
+                </div>
               </div>
 
             </div>
@@ -64,7 +67,7 @@ const NavBar = () => {
                 </a>
               </Link>
               <div className="sub-menu">
-                <Flex className="sub-menu-inner" flexColumn>
+                <div className="sub-menu-inner" flexColumn>
                   <Link href="/?page=container" as="/container">
                     <a>
                       <div className="item">
@@ -72,8 +75,8 @@ const NavBar = () => {
                       </div>
                     </a>
                   </Link>
-  
-                </Flex>
+
+                </div>
               </div>
 
             </div>

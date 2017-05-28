@@ -25,6 +25,7 @@
       position: absolute;
       top: 100%;
       left: 50%;
+      // padding-top: 30px;
       visibility: hidden;
       opacity: 0;
       transform: translate3d(-50%, 0, 0);
@@ -57,7 +58,8 @@
       box-shadow: 0 0 6px rgba(0,0,0,.4);
       text-transform: capitalize;
       transform: translate3d(0, 4%, 0);
-      transition: all .3s 0s;
+      visibility: hidden;
+      transition: all .3s;
       &::before {
         $length: 2rem;
         content: '';
@@ -78,7 +80,19 @@
     }
 
     &:hover .sub-menu-inner {
+      visibility: visible;
       transform: translate3d(0, 0%, 0);
+    }
+
+    &:hover .sub-menu-inner * {
+      visibility: visible;
+      transition: all .3s, visibility 0s 0s;
+    }
+
+    // need this to prevent chrome problem when hovering back, might need to adjust later for link transitions
+    .sub-menu-inner *{
+      visibility: hidden;
+      transition-delay: 0s, .3s;
     }
   }
 
