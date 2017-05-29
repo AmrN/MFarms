@@ -29,7 +29,15 @@ p {
   @include my(2);
 
   &.-lg {
-    font-size: $fz-2;
+    font-size: $fz-3;
+  }
+
+  &.-xlg {
+    font-size: $fz-4;
+    .icon {
+      max-width: 7rem;
+      margin-bottom: -2rem;
+    }
   }
 
   .icon {

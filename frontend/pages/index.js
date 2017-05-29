@@ -5,6 +5,7 @@ import BusinessPage from '../containers/business';
 import FarmersPage from '../containers/farmers';
 import ServicesPage from '../containers/services';
 import ContainerFarmsPage from '../containers/containerFarms';
+import GetInvolvedPage from '../containers/getInvolved';
 import Link from 'next/link';
 import React, { Component } from 'react';
 
@@ -57,6 +58,9 @@ export default class IndexPage extends Component {
         break;
       case 'container': 
         Page = ContainerFarmsPage;
+        break;
+      case 'get-involved':
+        Page = GetInvolvedPage;
         break;
     }
     console.log(Page);

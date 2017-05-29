@@ -1,0 +1,38 @@
+.GetInvolvedHeroContent {
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+
+  .get-involved-image {
+    flex: 1 1 37%;
+
+    img {
+      max-width: 15rem;
+    }
+  }
+
+  .get-involved-text {
+    flex: 3 1 63%;
+  }
+  @include tablet-up {
+    flex-direction: row;
+    text-align: left;
+    // min-height: 40rem;
+
+    .get-involved-image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  p {
+    line-height: 27px;
+
+    strong {
+      font-size: $fz-4;
+    }
+  }
+
+}

@@ -54,6 +54,13 @@ const NavBar = () => {
                       </div>
                     </a>
                   </Link>
+                  <Link href="/?page=get-involved" as="/get-involved">
+                    <a>
+                      <div className="item">
+                        other
+                      </div>
+                    </a>
+                  </Link>
                 </div>
               </div>
 
