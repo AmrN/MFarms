@@ -26,7 +26,7 @@ const Farmers = () => {
         <p className="-lg">
           Get in touch with us (<img className="icon" src="/static/footer/mail.png" alt="mail" />) to learn more about the benefits of adopting hydroponic technology and growing in the controlled environment of our container farms.
           </p>
-        <button>Shop now</button>
+        <button className="cta">Shop now</button>
       </ContainerBackground>
 
     </div>

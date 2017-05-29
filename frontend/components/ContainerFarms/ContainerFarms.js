@@ -224,7 +224,7 @@ const ContainerFarms = () => {
             </figure>
           </div>
         </div>
-        <button>Order your container</button>
+        <button className="cta">Order your container</button>
       </section>
     </div >
   );

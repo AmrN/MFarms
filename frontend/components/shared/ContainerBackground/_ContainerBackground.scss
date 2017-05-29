@@ -4,12 +4,12 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 70% 0, center top;
   background-size: 80%, 100%;
-  @include ptrel(38);
+  @include ptrel(36);
 
   .content {
     max-width: 64rem;
     margin: 0 auto;
-    @include prel(5);
+    @include pxrel(5);
     // @include pb(15);
   }
 }

@@ -1,5 +1,6 @@
 body {
   color: $copy-color;
+  font-size: $fz-1;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: $fz-4;
-  @include mb(5);
+  @include mb(10);
 
   sup {
     // font-weight: normal;

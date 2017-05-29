@@ -8,7 +8,6 @@
   .two-figure-container {
     display: flex;
     flex-wrap: wrap;
-    @include mb(10);
     // justify-content: space-between;
     figure {
       // flex: 0 0 50%;
@@ -22,5 +21,9 @@
     justify-content: center;
     align-items: center;
     @include mb(10);
+  }
+
+  .cta {
+    @include mt(10);
   }
 }

@@ -77,7 +77,7 @@ main {
 }
 
 section {
-  @include py(15);
+  @include py(10);
 
   &.-white {
     background-color: white;

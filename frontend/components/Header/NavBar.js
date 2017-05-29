@@ -81,9 +81,7 @@ const NavBar = () => {
 
             </div>
           </Flex>
-          <Flex className="menu-item" align="center">
-            <span >Shop Now</span>
-          </Flex>
+
           <Flex className="menu-item" align="center">
             <span >Contact us</span>
           </Flex>
