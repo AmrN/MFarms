@@ -1,3 +1,26 @@
 .ContainerFarms {
-  
+  .one-figure-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .two-figure-container {
+    display: flex;
+    flex-wrap: wrap;
+    @include mb(10);
+    // justify-content: space-between;
+    figure {
+      // flex: 0 0 50%;
+    }
+  }
+
+  figure {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mb(10);
+  }
 }

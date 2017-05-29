@@ -2,13 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-
+  justify-content: flex-start;
   .icon-item {
-    flex: 1 1 50%;
+    // flex: 1 1 100%;
+    flex: 1 1 100%;
+    // @include mx(10);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // @include pxrel(10);
+    @include mb(5);
     @include tablet {
       flex: 1 1 33.33%;
     }
@@ -19,8 +23,9 @@
   }
 
   .icon-text {
-    // max-width: 10rem;
-    @include pxrel(10);
+    max-width: 80%;
+    // @include pxrel(10);
+    // @include pxrel(10);
   }
 
   &.vertical {
@@ -36,13 +41,15 @@
 
   &.content-horizontal {
     align-items: flex-start;
-
+    text-align: left;
     .icon-item {
+      @include pl(5);
       flex-direction: row;
+      justify-content: flex-start;
     }
 
     .icon-text {
-      @include pl(10);
+      @include pl(8);
       // max-width: 100%;
     }
   }

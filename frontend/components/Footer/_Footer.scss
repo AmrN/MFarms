@@ -1,8 +1,10 @@
 .Footer {
   background-color: $light-grey;
+  // background: linear-gradient(to bottom, rgba(255,255,255, .6) 0%, rgba(255,255,255,1) 35%);
   // @include py(20);
+  // @include mt(20);
   @include py(10);
-
+  @include pt(20);
   .footer-links {
     display: flex;
     flex-direction: column;

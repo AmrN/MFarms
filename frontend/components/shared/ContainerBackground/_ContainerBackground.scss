@@ -1,0 +1,15 @@
+.ContainerBackground {
+  // background-color: tomato;
+  background-image: url('/static/containers/madarfarm-container.png'),url('/static/containers/green-background.jpg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 70% 0, center top;
+  background-size: 80%, 100%;
+  @include ptrel(38);
+
+  .content {
+    max-width: 64rem;
+    margin: 0 auto;
+    @include prel(5);
+    // @include pb(15);
+  }
+}

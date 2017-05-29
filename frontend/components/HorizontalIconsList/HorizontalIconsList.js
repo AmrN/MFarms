@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-const HorizontalIconsList = ({ icons, vertical, contentHorizontal }) => {
+const HorizontalIconsList = ({ icons, vertical, contentHorizontal, baseItemWidth }) => {
   if (!icons) {
     return null;
   }
@@ -23,6 +23,7 @@ const HorizontalIconsList = ({ icons, vertical, contentHorizontal }) => {
         <div
           key={icon.url}
           className="icon-item"
+          style={{flexBasis: baseItemWidth || null}}
         >
           <img
             className="icon"
