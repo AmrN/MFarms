@@ -1,0 +1,33 @@
+.MenuContainer {
+  position: relative;
+  display: inline-block;
+
+  .menu-container-inner {
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+    @include p(2);
+    position: relative;
+    // z-index: 2;
+  }
+
+  &::before {
+    // $length: 2rem;
+    // content: '';
+    // border: $length transparent solid;
+    // border-right: $length - .5rem transparent solid;
+    // border-left: $length - .5rem transparent solid;
+    // border-bottom: $length black solid;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate3d(-50%, -15px, 0);
+    // z-index: 1;
+    content: '▲';
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.4);
+
+    line-height: 0;
+  }
+}

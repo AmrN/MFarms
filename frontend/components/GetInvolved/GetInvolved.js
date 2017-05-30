@@ -1,5 +1,6 @@
 import React from 'react';
 import HorizontalIconsList from '../HorizontalIconsList/HorizontalIconsList';
+import FollowUs from './FollowUs';
 
 const needHelpIcons = [
   {
@@ -19,7 +20,14 @@ const needHelpIcons = [
 const stepsToTakeIcons = [
   {
     url: '/static/get-involved/follow.png',
-    text: 'Follow us on social media and join the conversation'
+    text: (
+      <div>
+        <p>
+          Follow us on social media and join the conversation
+        </p>
+        <FollowUs />
+      </div>
+    )
   },
   {
     url: '/static/get-involved/buy.png',
@@ -59,6 +67,7 @@ const GetInvolved = () => {
           <HorizontalIconsList
             icons={stepsToTakeIcons}
             contentHorizontal
+            contentHorizontalMobileWrap
             baseItemWidth="450px"
           />
         </div>

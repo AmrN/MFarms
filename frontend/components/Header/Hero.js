@@ -55,6 +55,7 @@ class Hero extends Component {
     const bgImgStyles = {
       ...this.state.bgImgStyles,
       backgroundImage: heroBackground,
+      backgroundPosition: "center center"
     };
     const { title, contentImage, children } = this.props;
 

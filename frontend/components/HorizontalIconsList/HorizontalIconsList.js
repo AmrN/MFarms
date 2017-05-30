@@ -1,14 +1,21 @@
 import React from 'react';
 import cn from 'classnames';
 
-const HorizontalIconsList = ({ icons, vertical, contentHorizontal, baseItemWidth }) => {
+const HorizontalIconsList = ({
+  icons,
+  vertical,
+  contentHorizontal,
+  contentHorizontalMobileWrap,
+  baseItemWidth,
+ }) => {
   if (!icons) {
     return null;
   }
 
   const classes = cn('HorizontalIconsList', {
     'vertical': vertical,
-    'content-horizontal': contentHorizontal
+    'content-horizontal': contentHorizontal, 
+    'content-horizontal-mobile-wrap': contentHorizontalMobileWrap
   });
 
   const getContent = (thing) => {
@@ -23,7 +30,7 @@ const HorizontalIconsList = ({ icons, vertical, contentHorizontal, baseItemWidth
         <div
           key={icon.url}
           className="icon-item"
-          style={{flexBasis: baseItemWidth || null}}
+          style={{ flexBasis: baseItemWidth || null }}
         >
           <img
             className="icon"
