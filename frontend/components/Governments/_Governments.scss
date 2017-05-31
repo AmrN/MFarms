@@ -1,0 +1,43 @@
+.Governments {
+  .side-by-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include mb(-5);  
+    @include mr(-10);
+    .left {
+      flex: 1 1 0;
+    }
+
+    .right {
+      flex: 1 1 0;
+    }
+
+    .left, .right {
+      @include mb(5);
+      @include mr(10);
+    }
+
+    .-column-first {
+      order: -1;
+    }
+
+    @include tablet-up {
+      flex-direction: row;
+
+      .-column-first {
+        order: initial;
+      }
+    }
+  }
+
+  .copy-wrapper {
+    width: 70rem;
+    // max-width: 100%;
+  }
+
+  .cta {
+    @include mt(10)
+  }
+}

@@ -54,6 +54,13 @@ const NavBar = () => {
                       </div>
                     </a>
                   </Link>
+                  <Link href="/?page=governments" as="/governments">
+                    <a>
+                      <div className="item">
+                        governments
+                      </div>
+                    </a>
+                  </Link>
                   <Link href="/?page=get-involved" as="/get-involved">
                     <a>
                       <div className="item">

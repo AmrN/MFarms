@@ -60,6 +60,14 @@ strong {
   &.-neutral {
     color: $copy-color;
   }
+
+  &.-lg {
+    font-size: $fz-3;
+  }
+
+  &.-xlg {
+    font-size: $fz-4;
+  }
 }
 
 em {
