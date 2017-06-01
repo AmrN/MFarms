@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Business from '../components/Business/Business';
 import React from 'react';
 import HeadTitle from '../components/HeadTitle';
+import { connect } from 'react-redux';
 
 const renderBusinessHeroContent = () => (
   <div className="hero-intro-wrapper">
@@ -35,9 +36,17 @@ const BusinessPage = () => (
   </div>
 );
 
-// BusinessPage.getInitialProps = async ({ req }) => {
-//   // console.log('erere');
-//   return { business: 'aha' }
-// }
+BusinessPage.getInitialProps = async ({ req }) => {
+  // console.log('erere');
+  return { temp2: 'ha' }
+}
 
 export default BusinessPage;
+
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     temp: state.temp
+//   }
+// };
+
+// export default connect(mapStateToProps, {})(BusinessPage);

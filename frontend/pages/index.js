@@ -9,14 +9,17 @@ import GetInvolvedPage from '../containers/getInvolved';
 import GovernmentsPage from '../containers/governments';
 import Link from 'next/link';
 import React, { Component } from 'react';
+import { initStore } from '../store'
+import withRedux from 'next-redux-wrapper'
 
-export default class IndexPage extends Component {
+class IndexPage extends Component {
 
   static async getInitialProps(params) {
 
     const props = {};
     const queryPage = params.query.page || '';
     const PageContainer = IndexPage.getPage(queryPage);
+    const { store } = params;
 
     if (PageContainer && PageContainer.getInitialProps) {
       return PageContainer.getInitialProps(params)
@@ -94,3 +97,10 @@ export default class IndexPage extends Component {
 
   }
 }
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+  }
+}
+
+export default withRedux(initStore, null, mapDispatchToProps)(IndexPage);
