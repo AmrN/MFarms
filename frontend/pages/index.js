@@ -12,36 +12,42 @@ import React, { Component } from 'react';
 
 export default class IndexPage extends Component {
 
-  static async getInitialProps({ query }) {
-    // let Page;
-    // switch (query.page) {
-    //   case 'business':
-    //     Page = BusinessPage;
-    //     break;
-    // }
-    // // console.log(Page);
-    // return { Page };
-    return {};
+  static async getInitialProps(params) {
+
+    const props = {};
+    const queryPage = params.query.page || '';
+    const PageContainer = IndexPage.getPage(queryPage);
+
+    if (PageContainer && PageContainer.getInitialProps) {
+      return PageContainer.getInitialProps(params)
+        .then(res => {
+          return Object.assign(props, res);
+        });
+    }
+    return props;
   }
 
   componentWillReceiveProps(nextProps) {
     this.setPage(nextProps);
-    // console.log('in componentWillReceiveProps');
   }
 
 
   componentWillMount() {
-    // console.log(this.props);
-
     this.setPage(this.props);
-    // console.log('in componentWillMount');
   }
 
   setPage(props) {
     let Page;
     const queryPage = props.url.query.page || '';
+    Page = IndexPage.getPage(queryPage);
+    this.Page = Page;
+  }
 
-    switch (queryPage) {
+  static getPage(path) {
+    let Page;
+    path = path || '';
+
+    switch (path) {
       case '':
         Page = ChallengePage;
         break;
@@ -57,7 +63,7 @@ export default class IndexPage extends Component {
       case 'services':
         Page = ServicesPage;
         break;
-      case 'container': 
+      case 'container':
         Page = ContainerFarmsPage;
         break;
       case 'get-involved':
@@ -67,8 +73,7 @@ export default class IndexPage extends Component {
         Page = GovernmentsPage;
         break;
     }
-    console.log(Page);
-    this.Page = Page;
+    return Page;
   }
 
   componentDidMount() {
@@ -76,29 +81,16 @@ export default class IndexPage extends Component {
   }
 
   render() {
-    // console.log('in render');
-    // console.log('props: ', this.props);
+    console.log('props: ', this.props);
     const Page = this.Page;
     if (!Page) {
       return null;
     }
     return (
       <PageLayout>
-        <Page />
+        <Page {...this.props} />
       </PageLayout>
     );
 
   }
 }
-/*() => (
-  <PageLayout>
-    <Hero
-      backgroundUrl="/static/challenge/challenge-background.jpg"
-      contentImage="/static/challenge/UN.png"
-      title="The Challenge"
-    >
-      {renderChallengeHeroContent()}
-    </Hero>
-    <Challenge />
-  </PageLayout>
-)*/

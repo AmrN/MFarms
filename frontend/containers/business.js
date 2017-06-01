@@ -15,7 +15,9 @@ const renderBusinessHeroContent = () => (
   </div>
 );
 
-export default () => (
+
+
+const BusinessPage = () => (
   <div>
     <HeadTitle title="Business" />
     {/*<PageLayout title="Business">*/}
@@ -31,4 +33,11 @@ export default () => (
 
     {/*</PageLayout>*/}
   </div>
-)
+);
+
+// BusinessPage.getInitialProps = async ({ req }) => {
+//   // console.log('erere');
+//   return { business: 'aha' }
+// }
+
+export default BusinessPage;

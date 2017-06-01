@@ -11,7 +11,7 @@ const Challenge = () => {
       <Infographic />
 
       <div className="cta-container">
-        <button className="cta">our approach</button>
+        <button className="cta">Our approach</button>
       </div>
 
       <div className="container">
