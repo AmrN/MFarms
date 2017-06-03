@@ -1,4 +1,6 @@
-const { postSchema } = require('shared');
+const schemas = require('../../../shared/src/schemas');
+// const URLSlugs = require('mongoose-url-slugs');
+const slugify = require('slugify-mongoose');
 
 // posts-model.js - A mongoose model
 // 
@@ -9,6 +11,7 @@ module.exports = function (app) {
   mongooseClient.set('debug', true);
   const posts = new mongooseClient.Schema({
     title: { type: String, required: true },
+    slug: { type: String, slug: 'title', index: true, unique: true },
     body: { type: String, required: true },
     image: { type: String, required: false, default: null },
     gallery: [{ type: String }],
@@ -17,11 +20,14 @@ module.exports = function (app) {
     timestamps: true,
   });
 
+  // add slug
+  posts.plugin(slugify);
+
   // text index all string fields
   posts.index({ title: 'text', body: 'text' });
 
 
-  posts.joiSchema = postSchema;
+  posts.joiSchema = schemas.postSchema;
 
   return mongooseClient.model('posts', posts);
 };

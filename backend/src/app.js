@@ -23,7 +23,7 @@ const app = feathers();
 
 const errorHandler = require('feathers-errors/handler');
 console.log(app.get('public'));
-
+console.log(process.env.cwd);
 // Load app configuration
 app.configure(configuration(path.join(__dirname, '..')));
 // Enable CORS, security, compression, favicon and body parsing
