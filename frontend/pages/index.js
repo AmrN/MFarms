@@ -7,6 +7,7 @@ import ServicesPage from '../containers/services';
 import ContainerFarmsPage from '../containers/containerFarms';
 import GetInvolvedPage from '../containers/getInvolved';
 import GovernmentsPage from '../containers/governments';
+import BlogPage from '../containers/blog';
 import Link from 'next/link';
 import React, { Component } from 'react';
 import { initStore } from '../store'
@@ -14,15 +15,15 @@ import withRedux from 'next-redux-wrapper'
 
 class IndexPage extends Component {
 
-  static async getInitialProps(params) {
+  static async getInitialProps(ctx) {
 
     const props = {};
-    const queryPage = params.query.page || '';
+    const queryPage = ctx.query.page || '';
     const PageContainer = IndexPage.getPage(queryPage);
-    const { store } = params;
+    const { store } = ctx;
 
     if (PageContainer && PageContainer.getInitialProps) {
-      return PageContainer.getInitialProps(params)
+      return PageContainer.getInitialProps(ctx)
         .then(res => {
           return Object.assign(props, res);
         });
@@ -75,6 +76,9 @@ class IndexPage extends Component {
       case 'governments':
         Page = GovernmentsPage;
         break;
+      case 'blog':
+        Page = BlogPage;
+        break;
     }
     return Page;
   }
@@ -84,7 +88,7 @@ class IndexPage extends Component {
   }
 
   render() {
-    console.log('props: ', this.props);
+    // console.log('props: ', this.props);
     const Page = this.Page;
     if (!Page) {
       return null;
