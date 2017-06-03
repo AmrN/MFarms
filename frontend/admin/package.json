@@ -4,15 +4,15 @@
   "private": true,
   "dependencies": {
     "admin-on-rest": "^1.0.2",
-    "aor-feathers-client": "github:amrn/aor-feathers-client",
+    "aor-feathers-client": "^0.3.1",
     "dns": "file:src/mock/dns",
     "feathers-authentication-client": "^0.3.2",
     "feathers-client": "^2.2.0",
     "feathers-hooks": "^2.0.1",
     "feathers-rest": "^1.7.2",
+    "joi-browser": "^10.0.6",
     "react": "~15.5.4",
-    "react-dom": "~15.5.4",
-    "shared": "../../shared"
+    "react-dom": "~15.5.4"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

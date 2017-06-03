@@ -1,4 +1,4 @@
-const schemas = require('../../../shared/src/schemas');
+const schemas = require('../../../shared');
 // const URLSlugs = require('mongoose-url-slugs');
 const slugify = require('slugify-mongoose');
 
@@ -27,7 +27,7 @@ module.exports = function (app) {
   posts.index({ title: 'text', body: 'text' });
 
 
-  posts.joiSchema = schemas.postSchema;
+  posts.yupSchema = schemas.postSchema;
 
   return mongooseClient.model('posts', posts);
 };

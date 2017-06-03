@@ -20,7 +20,7 @@ import {
   ImageField,
   ImageInput
 } from 'admin-on-rest';
-import { postSchema, Joi } from 'shared';
+import schemas from '../../../shared';
 
 export const PostList = (props) => (
   <List
@@ -96,20 +96,40 @@ const validate = (_values) => {
   // } else if (values.age < 18) {
   //     errors.age = ['Must be over 18'];
   // }
-  const result = Joi.validate(values, postSchema, { abortEarly: false });
+  // const result = Joi.validate(values, schemas.postSchema, { abortEarly: false });
+  // console.log('here: ', schemas);
+  return schemas.postSchema.validate(values, {abortEarly: false})
+    .then(_ => {
+        return {};      
+    })
+    .catch(err => {
+      const res = err.inner.reduce((resErr, errObj) => {
+        const key = errObj.path;
+        // const val = errObj.message.replace(/^".+"\s*/, '');
+        const val = errObj.message;
+        if (!resErr[key]) {
+          resErr[key] = [];
+        }
+        resErr[key].push(val);
+        return resErr;
+      }, {});
+      console.log(res);
+      return res;
+    });
+
+  // how replace?
   // debugger
-  const errs = result.error.details.reduce((res, errObj) => {
-    const key = errObj.path;
-    const val = errObj.message.replace(/^".+"\s*/, '');
-    console.log(res);
-    if (!res[key]) {
-      res[key] = [];
-    }
-    res[key].push(val);
-    return res;
-  }, {});
-  // console.log(result.error.details);
-  return errs;
+  // const errs = result.error.details.reduce((res, errObj) => {
+  //   const key = errObj.path;
+  //   const val = errObj.message.replace(/^".+"\s*/, '');
+  //   console.log(res);
+  //   if (!res[key]) {
+  //     res[key] = [];
+  //   }
+  //   res[key].push(val);
+  //   return res;
+  // }, {});
+  // return errs;
 };
 
 // const validate = (values) => {
@@ -118,7 +138,7 @@ const validate = (_values) => {
 
 export const PostCreate = (props) => (
   <Create {...props}>
-    <SimpleForm validate={validate}>
+    <SimpleForm asyncValidate={validate}>
 
       <TextInput source="title" />
       <LongTextInput source="body" />
